@@ -1,0 +1,10 @@
+{
+  "name": "The Value Delivery Metrics Loop",
+  "short_name": "VDML",
+  "theme_color": "#969fbe",
+  "background_color": "#060d22",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}

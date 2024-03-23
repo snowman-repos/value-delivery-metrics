@@ -1,0 +1,114 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+:root {
+  --blue--darker: #060d22;
+  --blue--medium: #19223c;
+  --blue--lighter: #293452;
+  --purple--darker: #68749e;
+  --purple--medium: #969fbe;
+  --purple--lighter: #e5e8f3;
+  --pink: #ff7aff;
+}
+
+html,
+body {
+  background-color: var(--blue--darker);
+  color: var(--purple--medium);
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a {
+  color: var(--pink);
+  transition: all 0.2s ease-in-out;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.title {
+  color: var(--purple--medium);
+  font-weight: 800;
+}
+
+.hero,
+.footer {
+  background-color: var(--blue--medium);
+}
+
+.hero {
+  background-image: url(images/skeleton--dark.png);
+  background-repeat: no-repeat;
+  background-position: 0% -30%;
+  background-size: 60%;
+}
+
+.hero-body .container {
+  max-width: 700px;
+}
+
+.hero-body .title {
+  color: var(--purple--medium);
+}
+
+.hero-body .title .darker {
+  color: var(--purple--darker);
+}
+
+.button {
+  border: none;
+  color: var(--pink);
+  background-color: var(--blue--darker);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  background-color: var(--blue--lighter);
+  border: none;
+  color: var(--pink);
+  transition: all 0.2s ease-in-out;
+}
+
+.video-placeholder {
+  width: 600px;
+  height: 400px;
+  background-color: #bdb4d6;
+  margin: 0 auto;
+}
+
+.emphasis {
+  color: var(--purple--darker);
+}
+
+.flex-item {
+  max-width: 40%;
+}
+
+.authors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.authors-list-item-image {
+  border-radius: 100%;
+  width: 10em;
+}
+
+.cc-logo {
+  height: 1.25em;
+}
+
+.license,
+.license strong {
+  color: var(--purple--darker);
+}
