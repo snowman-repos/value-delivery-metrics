@@ -54,6 +54,10 @@ a:hover {
   max-width: 700px;
 }
 
+.hero-body-content {
+  min-width: 30%;
+}
+
 .hero-body .title {
   color: var(--purple--medium);
 }
