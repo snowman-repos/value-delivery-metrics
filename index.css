@@ -46,7 +46,7 @@ a:hover {
 .hero {
   background-image: url(images/skeleton--dark.png);
   background-repeat: no-repeat;
-  background-position: 0% -30%;
+  background-position: 0% 5em;
   background-size: 60%;
 }
 
