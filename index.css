@@ -116,3 +116,31 @@ a:hover {
 .license strong {
   color: var(--purple--darker);
 }
+
+.example-metrics {
+  background-color: #68749e;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.75);
+  color: #060d22;
+  position: relative;
+}
+
+.example-metrics::after {
+  background: none;
+  background: linear-gradient(
+    0deg,
+    rgba(104, 116, 158, 1) 0%,
+    rgba(104, 116, 158, 0) 100%
+  );
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 35%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.content .example-metrics .title {
+  color: #060d22;
+}
