@@ -21,6 +21,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#060d22">
   <meta name="msapplication-TileColor" content="#060d22">
+
+  <script type="text/javascript">
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+  </script>
+  <script>
+        mixpanel.init('6e8021f67d7cf74c398861e91e343193');
+        mixpanel.track("PageView");
+    </script>
 </head>
 
 <body>
@@ -139,14 +147,14 @@
       <div class="container mt-6 mb-6">
         <div class="is-flex is-justify-content-space-around">
           <div class="flex-item">
-            <a href="value-delivery-metrics-loop--roadmap.pdf" download="the-value-delivery-metrics-loop.pdf" title="Download the Value Delivery Metrics Loop template">
+            <a href="value-delivery-metrics-loop--roadmap.pdf" download="the-value-delivery-metrics-loop.pdf" title="Download the Value Delivery Metrics Loop template" id="download-roadmap">
               <img src="images/value-delivery-metrics-loop--roadmap.jpg" alt="The Value Delivery Metrics Loop" class="placeholder-image" />
               <h3 class="title is-size-4 has-text-centered mt-2 mb-2">With Time Horizons</h3>
               <p class="has-text-white has-text-weight-light has-text-centered">Suitable for smaller teams working on new or growth-stage products where meaningful metrics are likely to change as the team and product grows.</p>
             </a>
           </div>
           <div class="flex-item">
-            <a href="value-delivery-metrics-loop--plain.pdf" download="the-value-delivery-metrics-loop.pdf" title="Download the Value Delivery Metrics Loop template">
+            <a href="value-delivery-metrics-loop--plain.pdf" download="the-value-delivery-metrics-loop.pdf" title="Download the Value Delivery Metrics Loop template" id="download-plain">
               <img src="images/value-delivery-metrics-loop--plain.jpg" alt="The Value Delivery Metrics Loop" class="placeholder-image" />
               <h3 class="title is-size-4 has-text-centered mt-2 mb-2">Without Time Horizons</h3>
               <p class="has-text-white has-text-weight-light has-text-centered">Suitable for larger teams working on mature products where meaningful metrics are unlikely to change.</p>
@@ -191,6 +199,18 @@
     </div>
     <p class="license has-text-weight-light is-size-7">&copy;&nbsp;Copyright 2024 Justin Farrell, Ali Ahmed, Wal Gedeon, Darryl Snow. The <strong>Value Delivery Metrics Loop</strong> is released under the <strong>Creative Commons Attribution ShareAlike 4.0 International</strong> license. This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creators. The license allows for commercial use. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.</p>
   </div>
+  <script>
+    document.getElementById("download-roadmap").onclick = () => {
+      mixpanel.track('Download', {
+        'Version': 'Roadmap'
+      })
+    }
+    document.getElementById("download-plain").onclick = () => {
+      mixpanel.track('Download', {
+        'Version': 'Plain'
+      })
+    }
+  </script>
 </body>
 
 </html>
